@@ -227,7 +227,7 @@ body {
 		color: $pure-white;
 		text-align: center;
 		perspective: 1000px;
-
+		overflow: hidden;
 		&:hover {
 			.islands__card-img {
 				transform: rotateY(-180deg);
@@ -251,10 +251,10 @@ body {
 					url('../img/water-3354063_1920.jpg');
 			}
 			&--second {
-				background-image: $blue-gradient, url('../img/water-3354063_1920.jpg');
+				background-image: $blue-gradient, url('../img/boat-166738_640.jpg');
 			}
 			&--third {
-				background-image: $purple-gradient, url('../img/water-3354063_1920.jpg');
+				background-image: $purple-gradient, url('../img/hawaii-79928_640.jpg');
 			}
 
 			&-title {
@@ -334,6 +334,66 @@ body {
 	}
 }
 
+// OFFERS
+
+.offers {
+	position: relative;
+	overflow: hidden;
+
+	.section-heading {
+		color: $pure-white;
+	}
+
+	&__option {
+		margin: 1em 0;
+		box-shadow: 5px 5px 10px #2e2e2e2e;
+		background-color: $pure-white;
+		overflow: hidden;
+
+		&-img {
+			width: 100%;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		&-info {
+			padding: 2em;
+		}
+
+		&-heading {
+			margin-bottom: 0.5em;
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.3rem;
+			color: $dark;
+		}
+
+		&-btn {
+			margin-top: 1em;
+			padding: 0.8em;
+			width: 100%;
+			color: $pure-white;
+			background-color: $main-color;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+
+			&::before {
+				background-color: $secondary-color;
+			}
+		}
+	}
+
+	@include heroImages('../img/maldives-3220702_1920.jpg');
+}
+
 @media (min-width: 576px) {
 	.dreams {
 		&__box {
@@ -359,6 +419,18 @@ body {
 		&__img {
 			margin-bottom: 0;
 			max-height: 300px;
+		}
+	}
+	.offers {
+		&__option {
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+
+			&-img {
+				width: 50%;
+				height: auto;
+			}
 		}
 	}
 }
